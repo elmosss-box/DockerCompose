@@ -1,6 +1,6 @@
 # DockerCompose
 M0375B4A6-dockerComposeFinal
-# Memoria de Prácticas: Despliegue de proyecto antiguo con Docker
+# Prácticas: DockerComposeFinal 
 **Alumno:** [Mossab Ech Chantoufy]
 **Asignatura:** Serveis de xarxa i Internet
 
