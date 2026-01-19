@@ -1,6 +1,6 @@
 # DockerCompose
 M0375B4A6-dockerComposeFinal
-# Memoria de Prácticas: Despliegue de Footlocker con Docker
+# Memoria de Prácticas: Despliegue de proyecto antiguo con Docker
 **Alumno:** [Mossab Ech Chantoufy]
 **Asignatura:** Serveis de xarxa i Internet
 
@@ -74,5 +74,10 @@ Cuando intenté arreglar las carpetas y reiniciar, Docker se quedó bloqueado co
 Para terminar, explico brevemente qué hace cada archivo importante de mi práctica:
 
 * **Dockerfile:** Aunque he usado imágenes ya hechas, sé que este archivo es como la receta para crear una imagen desde cero, diciendo qué sistema operativo usa y qué programas instala.
+* <img width="477" height="288" alt="image" src="https://github.com/user-attachments/assets/923253a8-99b1-4dba-b6a6-11f8d93b33ff" />
+
 * **Docker-compose.yaml:** Es mi archivo favorito. Aquí es donde digo "quiero un Nginx, un PHP y un MySQL" y cómo se conectan entre ellos. Es mucho mejor que lanzar comandos sueltos por terminal.
+<img width="713" height="637" alt="image" src="https://github.com/user-attachments/assets/b8ce23c8-2ef5-4f66-95f4-bd2ea7166a9e" />
+<img width="594" height="329" alt="image" src="https://github.com/user-attachments/assets/da1a4936-d0f8-4393-8fc0-e806d86c441d" />
+
 * **Default.conf:** Aquí está la gran diferencia con una instalación normal. En lugar de conectar a una IP fija, conecto al nombre del servicio (`fastcgi_pass footlocker_php:9000`). Esto hace que mi proyecto sea súper flexible.
