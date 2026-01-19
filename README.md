@@ -57,7 +57,7 @@ Al principio, la web me daba un error fatal diciendo que no encontraba la funci�
 **El error de "localhost"**
 Mi código PHP intentaba conectarse a "localhost", pero no funcionaba. Me di cuenta de que en Docker, "localhost" significa "yo mismo".
 * **Solución:** Cambié el archivo de conexión y puse el nombre del contenedor (`footlocker_db`). Aprendí que Docker tiene un DNS interno que resuelve esos nombres mágicamente.
-  <img width="620" height="352" alt="image" src="https://github.com/user-attachments/assets/7fa0dd27-c577-4603-bb1d-28de6586ff88" />
+<img width="620" height="352" alt="image" src="https://github.com/user-attachments/assets/7fa0dd27-c577-4603-bb1d-28de6586ff88" />
 
 **Nginx no encontraba mis archivos (Error 403)**
 Me salía un error de "Forbidden". Al revisar, vi que tenía una carpeta dentro de otra carpeta (`footlocker/footlocker`) y Nginx estaba buscando en la primera, que estaba vacía.
@@ -74,10 +74,11 @@ Cuando intenté arreglar las carpetas y reiniciar, Docker se quedó bloqueado co
 Para terminar, explico brevemente qué hace cada archivo importante de mi práctica:
 
 * **Dockerfile:** Aunque he usado imágenes ya hechas, sé que este archivo es como la receta para crear una imagen desde cero, diciendo qué sistema operativo usa y qué programas instala.
-* <img width="477" height="288" alt="image" src="https://github.com/user-attachments/assets/923253a8-99b1-4dba-b6a6-11f8d93b33ff" />
+<img width="477" height="288" alt="image" src="https://github.com/user-attachments/assets/923253a8-99b1-4dba-b6a6-11f8d93b33ff" />
 
 * **Docker-compose.yaml:** Es mi archivo favorito. Aquí es donde digo "quiero un Nginx, un PHP y un MySQL" y cómo se conectan entre ellos. Es mucho mejor que lanzar comandos sueltos por terminal.
 <img width="713" height="637" alt="image" src="https://github.com/user-attachments/assets/b8ce23c8-2ef5-4f66-95f4-bd2ea7166a9e" />
 <img width="594" height="329" alt="image" src="https://github.com/user-attachments/assets/da1a4936-d0f8-4393-8fc0-e806d86c441d" />
 
 * **Default.conf:** Aquí está la gran diferencia con una instalación normal. En lugar de conectar a una IP fija, conecto al nombre del servicio (`fastcgi_pass footlocker_php:9000`). Esto hace que mi proyecto sea súper flexible.
+<img width="774" height="437" alt="image" src="https://github.com/user-attachments/assets/1ac1bebb-cedc-4e71-9c75-a0ed5d530caa" />
